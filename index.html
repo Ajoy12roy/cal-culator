@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EX Pro – Scientific Calculator</title>
+  <meta name="description" content="Premium RGB scientific calculator with 50+ functions: trigonometry, logarithms, hyperbolic, memory, permutations, combinations and more. Inspired by Casio fx-991 EX Plus." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Ambient animated background -->
+  <div class="bg-canvas" aria-hidden="true">
+    <div class="orb o1"></div>
+    <div class="orb o2"></div>
+    <div class="orb o3"></div>
+    <div class="orb o4"></div>
+  </div>
+
+  <!-- Outer RGB animated border frame -->
+  <div class="calc-outer" id="calc-outer">
+    <div class="calculator" id="calculator">
+
+      <!-- Brand bar -->
+      <div class="brand-bar">
+        <div class="brand-left">
+          <span class="brand-logo">EX<em>PRO</em></span>
+          <span class="brand-sub">SCIENTIFIC CALCULATOR</span>
+        </div>
+        <div class="brand-model">fx<span>–</span>991<sup>+</sup></div>
+      </div>
+
+      <!-- LCD Display panel -->
+      <div class="lcd" id="lcd" role="region" aria-label="Calculator Display">
+        <div class="lcd-status-row">
+          <div class="lcd-sl">
+            <span class="s-badge badge-mode" id="badge-mode">DEG</span>
+            <span class="s-badge badge-shift hidden" id="badge-shift">SHIFT</span>
+            <span class="s-badge badge-hyp hidden" id="badge-hyp">HYP</span>
+          </div>
+          <div class="lcd-sr">
+            <span class="s-badge badge-mem hidden" id="badge-mem">M</span>
+          </div>
+        </div>
+        <div class="lcd-expr" id="lcd-expr" aria-live="polite">&nbsp;</div>
+        <div class="lcd-result" id="lcd-result" aria-live="assertive">0</div>
+      </div>
+
+      <!-- Button grid — populated dynamically by script.js -->
+      <div class="btn-grid" id="btn-grid" role="group" aria-label="Calculator Buttons"></div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
