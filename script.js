@@ -1,4 +1,4 @@
-git commit -m "first commit"'use strict';
+'use strict';
 /* ====================================================
    EX PRO SCIENTIFIC CALCULATOR — script.js
    50+ Functions · Inspired by Casio fx-991 EX Plus
